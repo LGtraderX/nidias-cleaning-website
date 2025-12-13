@@ -8,14 +8,17 @@
   <style>
     :root{
       --bg:#0b1220;
-      --card:#0f1a33;
       --text:#eaf1ff;
       --muted:#b7c4e2;
       --line:rgba(255,255,255,.12);
-      --accent:#6ee7ff;
       --radius:18px;
       --max:1100px;
       --shadow:0 18px 55px rgba(0,0,0,.35);
+
+      /* Brand Pink (official) */
+      --accent:#f2a7b5;
+      --accentDark:#e58a9d;
+      --accentRgb:242,167,181;
     }
 
     *{box-sizing:border-box}
@@ -24,8 +27,8 @@
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       color:var(--text);
       background:
-        radial-gradient(900px 500px at 10% -10%, rgba(110,231,255,.16), transparent 55%),
-        radial-gradient(900px 500px at 90% 0%, rgba(110,231,255,.10), transparent 55%),
+        radial-gradient(900px 500px at 10% -10%, rgba(var(--accentRgb), .16), transparent 55%),
+        radial-gradient(900px 500px at 90% 0%, rgba(var(--accentRgb), .10), transparent 55%),
         var(--bg);
       line-height:1.5;
     }
@@ -54,18 +57,23 @@
     .brand{
       display:flex;
       align-items:center;
-      gap:10px;
+      gap:12px;
+    }
+
+    .brand img{
+      height:32px; /* slightly smaller = cleaner */
+      width:auto;
+      display:block;
+    }
+
+    .brand-text{
       font-weight:900;
+      color:var(--accent);
+      line-height:1.1;
       letter-spacing:.2px;
     }
-    .logo{
-      width:34px; height:34px;
-      border-radius:12px;
-      background: linear-gradient(135deg, rgba(110,231,255,.95), rgba(110,231,255,.35));
-      box-shadow: 0 12px 30px rgba(110,231,255,.12);
-      border:1px solid rgba(255,255,255,.10);
-    }
-    .brand small{
+
+    .brand-text small{
       display:block;
       font-weight:700;
       color:var(--muted);
@@ -103,16 +111,15 @@
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      padding:10px 14px;
+      padding:10px 16px;
       border-radius:14px;
-      border:1px solid rgba(110,231,255,.28);
-      background: rgba(110,231,255,.10);
+      background:var(--accent);
+      color:var(--bg);
       font-weight:900;
       white-space:nowrap;
+      border:none;
     }
-    .cta:hover{
-      background: rgba(110,231,255,.16);
-    }
+    .cta:hover{ background:var(--accentDark); }
 
     /* Hero */
     .hero{padding:44px 0 18px}
@@ -158,24 +165,38 @@
       margin-top:18px;
     }
 
+    /* Buttons = official pink */
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      padding:12px 14px;
+      padding:12px 16px;
       border-radius:14px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.06);
+      background: var(--accent);
+      color: var(--bg);
       font-weight:900;
-      color:var(--text);
+      border:none;
     }
-    .btn:hover{background: rgba(255,255,255,.10)}
-    .btn.primary{
-      border-color: rgba(110,231,255,.35);
-      background: linear-gradient(135deg, rgba(110,231,255,.16), rgba(110,231,255,.06));
+    .btn:hover{ background: var(--accentDark); }
+
+    /* Mansion badge */
+    .mansion-note{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      margin-top:12px;
+      font-weight:800;
+      color:var(--muted);
+      font-size:14px;
     }
-    .btn.primary:hover{
-      background: linear-gradient(135deg, rgba(110,231,255,.22), rgba(110,231,255,.10));
+    .mansion-badge{
+      padding:5px 10px;
+      border-radius:999px;
+      background:var(--accent);
+      color:var(--bg);
+      font-weight:900;
+      font-size:12px;
+      white-space:nowrap;
     }
 
     /* Quick blocks */
@@ -193,6 +214,21 @@
     }
     .block b{display:block}
     .block span{display:block; color:var(--muted); font-weight:700; margin-top:4px}
+
+    /* WhatsApp */
+    .whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      background:#25D366;
+      color:#fff;
+      padding:14px 18px;
+      border-radius:999px;
+      font-weight:900;
+      box-shadow:0 12px 30px rgba(0,0,0,.35);
+      z-index:999;
+    }
+    .whatsapp:hover{background:#1ebe5d}
 
     /* Footer */
     footer{
@@ -221,8 +257,8 @@
   <div class="container">
     <div class="nav">
       <div class="brand">
-        <div class="logo" aria-hidden="true"></div>
-        <div>
+        <img src="assets/logo.png" alt="Nidia’s House & Office Cleaning Service Logo">
+        <div class="brand-text">
           Nidia’s House & Office Cleaning Service
           <small>Mountainside, NJ</small>
         </div>
@@ -238,7 +274,7 @@
         </ul>
       </nav>
 
-      <a class="cta" href="tel:19083431845">Call or Text: 908-343-1845</a>
+      <a class="cta" href="tel:19083431845">Call Now: 908-343-1845</a>
     </div>
   </div>
 </header>
@@ -247,7 +283,7 @@
   <section class="hero">
     <div class="hero-card">
       <h1>Nidia’s House & Office Cleaning Service</h1>
-      <p class="sub">Mountainside, NJ • Call or Text: 908-343-1845</p>
+      <p class="sub">Mountainside, NJ • Reliable • Affordable • Professional</p>
 
       <h2>Professional Cleaning You Can Trust</h2>
 
@@ -257,10 +293,15 @@
         <li>Move-In / Move-Out Deep Cleaning</li>
       </ul>
 
+      <div class="mansion-note">
+        <span class="mansion-badge">Large Homes</span>
+        <span>Experienced with large homes and high-end residences.</span>
+      </div>
+
       <div class="actions">
-        <a class="btn primary" href="tel:19083431845">Call Now</a>
+        <a class="btn" href="tel:19083431845">Call Now</a>
         <a class="btn" href="services.html">View Services</a>
-        <a class="btn" href="contact.html">Get a Quote</a>
+        <a class="btn" href="mailto:nidiacleaningservices@gmail.com?subject=Cleaning%20Quote%20Request">Get a Quote</a>
       </div>
 
       <div class="blocks" aria-label="Highlights">
@@ -274,7 +315,7 @@
         </div>
         <div class="block">
           <b>Fast Scheduling</b>
-          <span>Call or text to book.</span>
+          <span>Call, text, or email to book.</span>
         </div>
       </div>
     </div>
@@ -286,6 +327,8 @@
     © <span id="year"></span> Nidia’s House & Office Cleaning Service • Mountainside, NJ • 908-343-1845
   </div>
 </footer>
+
+<a class="whatsapp" href="https://wa.me/19083431845" target="_blank" rel="noopener">WhatsApp</a>
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
