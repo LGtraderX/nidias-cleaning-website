@@ -4,35 +4,261 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cleaning Blog | Nidia’s House & Office Cleaning Service</title>
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --text:#eaf1ff;
+      --muted:#b7c4e2;
+      --line:rgba(255,255,255,.12);
+      --radius:18px;
+      --max:1100px;
+      --shadow:0 18px 55px rgba(0,0,0,.35);
+
+      /* Brand Pink (official) */
+      --accent:#f2a7b5;
+      --accentDark:#e58a9d;
+      --accentRgb:242,167,181;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 10% -10%, rgba(var(--accentRgb), .16), transparent 55%),
+        radial-gradient(900px 500px at 90% 0%, rgba(var(--accentRgb), .10), transparent 55%),
+        var(--bg);
+      line-height:1.6;
+    }
+
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto;padding:0 18px}
+
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(11,18,32,.78);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:14px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .brand img{
+      height:32px;
+      width:auto;
+      display:block;
+    }
+
+    .brand-text{
+      font-weight:900;
+      color:var(--accent);
+      line-height:1.1;
+      letter-spacing:.2px;
+    }
+
+    .brand-text small{
+      display:block;
+      font-size:12px;
+      color:var(--muted);
+      font-weight:700;
+      margin-top:2px;
+    }
+
+    nav ul{
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      padding:9px 12px;
+      border-radius:12px;
+      color:var(--muted);
+      font-weight:800;
+    }
+
+    nav a:hover{
+      color:var(--text);
+      background:rgba(255,255,255,.06);
+    }
+
+    .cta{
+      padding:10px 16px;
+      border-radius:14px;
+      background:var(--accent);
+      color:var(--bg);
+      font-weight:900;
+      white-space:nowrap;
+      border:none;
+    }
+    .cta:hover{background:var(--accentDark)}
+
+    /* Page */
+    main{padding:44px 0 18px}
+
+    .card{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:26px;
+    }
+
+    h1{
+      margin:0 0 10px;
+      font-size:38px;
+      letter-spacing:-.6px;
+    }
+
+    .sub{
+      color:var(--muted);
+      font-weight:800;
+      margin-bottom:18px;
+    }
+
+    .post-list{
+      display:grid;
+      gap:16px;
+    }
+
+    .post{
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.03);
+      border-radius:16px;
+      padding:18px;
+    }
+
+    .post h2{
+      margin:0 0 6px;
+      font-size:20px;
+    }
+
+    .post p{
+      margin:0 0 10px;
+      color:var(--muted);
+      font-weight:700;
+    }
+
+    .post a.read{
+      display:inline-block;
+      padding:8px 14px;
+      border-radius:999px;
+      background:var(--accent);
+      color:var(--bg);
+      font-weight:900;
+      font-size:14px;
+    }
+    .post a.read:hover{background:var(--accentDark)}
+
+    /* WhatsApp */
+    .whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      background:#25D366;
+      color:#fff;
+      padding:14px 18px;
+      border-radius:999px;
+      font-weight:900;
+      box-shadow:0 12px 30px rgba(0,0,0,.35);
+      z-index:999;
+    }
+    .whatsapp:hover{background:#1ebe5d}
+
+    footer{
+      margin-top:26px;
+      border-top:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      padding:18px 0;
+      color:var(--muted);
+      font-weight:700;
+      font-size:14px;
+    }
+
+    @media (max-width:860px){
+      h1{font-size:32px}
+      .nav{align-items:flex-start}
+    }
+  </style>
 </head>
+
 <body>
 
-<nav>
-  <a href="../index.html">Home</a> |
-  <a href="../services.html">Services</a> |
-  <a href="../about.html">About</a> |
-  <a href="../contact.html">Contact</a> |
-  <a href="index.html">Blog</a>
-</nav>
-<hr>
+<header>
+  <div class="container">
+    <div class="nav">
+      <div class="brand">
+        <img src="../assets/logo.png" alt="Nidia’s House & Office Cleaning Service Logo">
+        <div class="brand-text">
+          Nidia’s House & Office Cleaning Service
+          <small>Mountainside, NJ</small>
+        </div>
+      </div>
 
-<h1>Cleaning Tips & Local Cleaning Services</h1>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../services.html">Services</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="index.html">Blog</a></li>
+        </ul>
+      </nav>
 
-<p>
-Welcome to our cleaning blog.  
-Here we share information about house and office cleaning services,
-deep cleaning, and move-in / move-out cleaning in Mountainside, NJ
-and surrounding areas.
-</p>
+      <a class="cta" href="tel:19083431845">Call Now: 908-343-1845</a>
+    </div>
+  </div>
+</header>
 
-<h2>Latest Articles</h2>
+<main class="container">
+  <section class="card">
+    <h1>Cleaning Tips & Local Cleaning Services</h1>
+    <p class="sub">
+      Helpful information about house and office cleaning, deep cleaning,
+      and move-in / move-out services in Mountainside, NJ and nearby areas.
+    </p>
 
-<ul>
-  <li>
-    <a href="deep-cleaning-mountainside-nj.html"><strong>Deep Cleaning in Mountainside, NJ</strong></a><br>
-    What’s included and when you need it.
-  </li>
-</ul>
+    <div class="post-list">
+      <article class="post">
+        <h2>Deep Cleaning in Mountainside, NJ</h2>
+        <p>What’s included and when you need it.</p>
+        <a class="read" href="deep-cleaning-mountainside-nj.html">Read Article</a>
+      </article>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> Nidia’s House & Office Cleaning Service • Mountainside, NJ • 908-343-1845
+  </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/19083431845" target="_blank" rel="noopener">WhatsApp</a>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
