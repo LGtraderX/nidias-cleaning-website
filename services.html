@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>House & Office Cleaning Services in Mountainside, NJ</title>
+  <title>House & Office Cleaning Services</title>
 
   <style>
     :root{
@@ -33,8 +33,8 @@
       line-height:1.5;
     }
 
-    a{color:inherit; text-decoration:none}
-    .container{max-width:var(--max); margin:0 auto; padding:0 18px}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto;padding:0 18px}
 
     /* Header */
     header{
@@ -57,27 +57,25 @@
     .brand{
       display:flex;
       align-items:center;
-      gap:10px;
-      font-weight:900;
+      gap:12px;
     }
 
-    .logo{
-      width:34px;height:34px;
-      border-radius:12px;
-      background:linear-gradient(135deg, rgba(var(--accentRgb),.95), rgba(var(--accentRgb),.35));
-      box-shadow:0 12px 30px rgba(var(--accentRgb),.12);
-      border:1px solid rgba(255,255,255,.1);
-    }
-
-    .brand-name{
-      color:var(--accent);
-      font-weight:900;
-    }
-
-    .brand small{
+    .brand img{
+      height:36px;
+      width:auto;
       display:block;
-      color:var(--muted);
+    }
+
+    .brand-text{
+      font-weight:900;
+      color:var(--accent);
+      line-height:1.1;
+    }
+
+    .brand-text small{
+      display:block;
       font-size:12px;
+      color:var(--muted);
       font-weight:700;
       margin-top:2px;
     }
@@ -103,19 +101,17 @@
       background:rgba(255,255,255,.06);
     }
 
-    /* Top CTA */
     .cta{
-      padding:10px 14px;
+      padding:10px 16px;
       border-radius:14px;
       background:var(--accent);
       color:var(--bg);
-      border:none;
       font-weight:900;
       white-space:nowrap;
     }
     .cta:hover{background:var(--accentDark)}
 
-    /* Page */
+    /* Content */
     .hero{padding:44px 0 18px}
     .hero-card{
       border:1px solid var(--line);
@@ -126,7 +122,7 @@
     }
 
     h1{
-      margin:0 0 10px;
+      margin:0 0 8px;
       font-size:38px;
       letter-spacing:-.6px;
     }
@@ -160,7 +156,6 @@
       padding-top:18px;
     }
 
-    /* Large Homes badge */
     .mansion-note{
       display:flex;
       align-items:center;
@@ -174,30 +169,42 @@
     .mansion-badge{
       padding:5px 10px;
       border-radius:999px;
-      background:var(--accent); /* PINK sólido */
+      background:var(--accent);
       color:var(--bg);
       font-weight:900;
       font-size:12px;
-      white-space:nowrap;
     }
 
     .actions{
       display:flex;
       gap:12px;
       flex-wrap:wrap;
-      margin-top:18px;
+      margin-top:20px;
     }
 
     .btn{
       padding:12px 16px;
       border-radius:14px;
-      border:none;
       background:var(--accent);
       color:var(--bg);
       font-weight:900;
-      cursor:pointer;
     }
     .btn:hover{background:var(--accentDark)}
+
+    /* WhatsApp */
+    .whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      background:#25D366;
+      color:#fff;
+      padding:14px 18px;
+      border-radius:999px;
+      font-weight:900;
+      box-shadow:0 12px 30px rgba(0,0,0,.35);
+      z-index:999;
+    }
+    .whatsapp:hover{background:#1ebe5d}
 
     footer{
       margin-top:26px;
@@ -209,30 +216,9 @@
       font-size:14px;
     }
 
-    /* WhatsApp */
-    .whatsapp-float{
-      position:fixed;
-      right:18px;
-      bottom:18px;
-      height:56px;
-      padding:0 16px 0 14px;
-      background:#25D366;
-      border-radius:999px;
-      display:flex;
-      align-items:center;
-      gap:10px;
-      box-shadow:0 12px 30px rgba(0,0,0,.35);
-      z-index:999;
-      font-weight:900;
-      color:#fff;
-    }
-    .whatsapp-float:hover{background:#1ebe5d}
-    .whatsapp-float svg{width:24px;height:24px;fill:#fff}
-
     @media (max-width:860px){
       h1{font-size:32px}
       .nav{align-items:flex-start}
-      .cta{margin-left:auto}
     }
   </style>
 </head>
@@ -243,9 +229,9 @@
   <div class="container">
     <div class="nav">
       <div class="brand">
-        <div class="logo"></div>
-        <div>
-          <span class="brand-name">Nidia’s House & Office Cleaning Service</span>
+        <img src="assets/logo.png" alt="Nidia’s House & Office Cleaning Service Logo">
+        <div class="brand-text">
+          Nidia’s House & Office Cleaning Service
           <small>Mountainside, NJ</small>
         </div>
       </div>
@@ -268,8 +254,9 @@
 <main class="container">
   <section class="hero">
     <div class="hero-card">
-      <h1>House & Office Cleaning Services in Mountainside, NJ</h1>
-      <p class="sub">Reliable • Affordable • Professional</p>
+
+      <h1>House & Office Cleaning Services</h1>
+      <p class="sub">Serving Mountainside, NJ • Reliable • Affordable • Professional</p>
 
       <p>
         Nidia’s House & Office Cleaning Service provides reliable and professional cleaning services
@@ -302,7 +289,7 @@
 
       <div class="actions">
         <a class="btn" href="tel:19083431845">Call Now</a>
-        <a class="btn" href="mailto:nidiacleaningservices@gmail.com?subject=Cleaning%20Quote%20Request%20%E2%80%93%20Mountainside%2C%20NJ">Get a Quote</a>
+        <a class="btn" href="mailto:nidiacleaningservices@gmail.com?subject=Cleaning%20Quote%20Request">Get a Quote</a>
         <a class="btn" href="index.html">Back to Home</a>
       </div>
 
@@ -316,12 +303,11 @@
   </div>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/19083431845" target="_blank" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24">
-    <path d="M20.52 3.48A11.9 11.9 0 0 0 12.03 0C5.4 0 .02 5.38.02 12c0 2.12.55 4.19 1.6 6.02L0 24l6.17-1.57A11.93 11.93 0 0 0 12.03 24C18.66 24 24 18.62 24 12c0-3.19-1.25-6.19-3.48-8.52z"/>
-  </svg>
-  <span>WhatsApp</span>
-</a>
+<a class="whatsapp" href="https://wa.me/19083431845" target="_blank">WhatsApp</a>
 
 <script>
-  document.ge
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
