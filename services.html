@@ -105,7 +105,6 @@
       font-weight:900;
       white-space:nowrap;
     }
-
     .cta:hover{background:rgba(var(--accentRgb),.16)}
 
     /* Page */
@@ -131,7 +130,7 @@
     }
 
     h2{
-      margin:22px 0 10px;
+      margin:22px 0 8px;
       font-size:22px;
     }
 
@@ -139,15 +138,23 @@
       color:var(--muted);
       font-weight:700;
       max-width:82ch;
+      margin:10px 0;
     }
 
     ul{
       padding-left:18px;
       color:var(--muted);
       font-weight:700;
+      margin:8px 0 10px;
     }
-
     li{margin:6px 0}
+
+    .note{
+      margin-top:6px;
+      font-size:14px;
+      color:var(--muted);
+      opacity:.95;
+    }
 
     .section{
       border-top:1px solid rgba(255,255,255,.08);
@@ -163,24 +170,22 @@
     }
 
     .btn{
-      padding:12px 14px;
+      padding:12px 16px;
       border-radius:14px;
       border:1px solid var(--line);
       background:rgba(255,255,255,.06);
       font-weight:900;
       color:var(--text);
     }
-
     .btn:hover{background:rgba(255,255,255,.1)}
 
-    /* CTA principal */
-    .btn.cta-main{
+    /* Pink solid buttons (CTA) */
+    .btn.pink{
       background:var(--accent);
       color:var(--bg);
       border:none;
     }
-
-    .btn.cta-main:hover{
+    .btn.pink:hover{
       background:var(--accentDark);
     }
 
@@ -193,6 +198,24 @@
       font-weight:700;
       font-size:14px;
     }
+
+    /* WhatsApp Floating */
+    .whatsapp-float{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      width:58px;
+      height:58px;
+      background:#25D366;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 12px 30px rgba(0,0,0,.35);
+      z-index:999;
+    }
+    .whatsapp-float:hover{background:#1ebe5d}
+    .whatsapp-float svg{width:28px;height:28px;fill:#fff}
 
     @media (max-width:860px){
       h1{font-size:32px}
@@ -223,7 +246,7 @@
         </ul>
       </nav>
 
-      <a class="cta" href="tel:19083431845">Call or Text: 908-343-1845</a>
+      <a class="cta" href="tel:19083431845">Call Now: 908-343-1845</a>
     </div>
   </div>
 </header>
@@ -232,7 +255,7 @@
   <section class="hero">
     <div class="hero-card">
       <h1>House & Office Cleaning Services in Mountainside, NJ</h1>
-      <p class="sub">Reliable • Affordable • Professional — Call or Text: 908-343-1845</p>
+      <p class="sub">Reliable • Affordable • Professional</p>
 
       <p>
         Nidia’s House & Office Cleaning Service provides reliable and professional cleaning services
@@ -246,22 +269,30 @@
           <li>Biweekly (every other week) cleaning</li>
           <li>Monthly cleaning</li>
         </ul>
+        <!-- Mansions signal (subtle) -->
+        <div class="note">Experienced with large homes and high-end residences.</div>
       </div>
 
       <div class="section">
         <h2>Deep Cleaning (Initial Service)</h2>
-        <p>Recommended for first-time customers or homes needing extra attention.</p>
+        <p>
+          Recommended for first-time customers or properties that need extra attention
+          before starting regular maintenance.
+        </p>
       </div>
 
       <div class="section">
         <h2>Move-In / Move-Out Deep Cleaning</h2>
-        <p>Ideal for tenants, landlords, and property managers.</p>
+        <p>
+          Ideal for tenants, landlords, property managers, and homeowners preparing a property
+          for new occupants.
+        </p>
       </div>
 
       <div class="actions">
-        <a class="btn cta-main" href="tel:19083431845">Call Now</a>
-        <a class="btn" href="contact.html">Get a Quote</a>
-        <a class="btn" href="index.html">Back to Home</a>
+        <a class="btn pink" href="tel:19083431845">Call Now</a>
+        <a class="btn pink" href="contact.html">Get a Quote</a>
+        <a class="btn pink" href="index.html">Back to Home</a>
       </div>
 
     </div>
@@ -273,6 +304,16 @@
     © <span id="year"></span> Nidia’s House & Office Cleaning Service • Mountainside, NJ • 908-343-1845
   </div>
 </footer>
+
+<!-- WhatsApp Floating Button -->
+<a class="whatsapp-float"
+   href="https://wa.me/19083431845"
+   target="_blank"
+   aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M20.52 3.48A11.9 11.9 0 0 0 12.03 0C5.4 0 .02 5.38.02 12c0 2.12.55 4.19 1.6 6.02L0 24l6.17-1.57A11.93 11.93 0 0 0 12.03 24C18.66 24 24 18.62 24 12c0-3.19-1.25-6.19-3.48-8.52z"/>
+  </svg>
+</a>
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
