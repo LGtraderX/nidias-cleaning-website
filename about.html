@@ -4,64 +4,193 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>About Nidia’s House & Office Cleaning Service | Mountainside, NJ</title>
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a33;
+      --text:#eaf1ff;
+      --muted:#b7c4e2;
+      --line:rgba(255,255,255,.12);
+      --pink:#f4a7b9;
+      --radius:18px;
+      --max:1100px;
+      --shadow:0 18px 55px rgba(0,0,0,.35);
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--text);
+      background: var(--bg);
+      line-height:1.5;
+    }
+
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto;padding:0 18px}
+
+    header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(11,18,32,.85);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:14px;padding:14px 0;
+    }
+
+    .brand{
+      display:flex;align-items:center;gap:12px;font-weight:900;
+    }
+    .brand img{
+      width:38px;height:38px;border-radius:10px;
+    }
+    .brand small{
+      display:block;font-weight:700;color:var(--muted);font-size:12px;
+    }
+
+    nav ul{
+      list-style:none;margin:0;padding:0;
+      display:flex;gap:10px;flex-wrap:wrap;
+    }
+    nav a{
+      padding:9px 12px;border-radius:12px;
+      color:var(--muted);font-weight:800;
+    }
+    nav a:hover{color:var(--text);background:rgba(255,255,255,.06)}
+
+    .cta{
+      padding:10px 16px;border-radius:14px;
+      background:var(--pink);color:#0b1220;
+      font-weight:900;
+    }
+
+    .hero{padding:44px 0}
+    .card{
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:28px;
+    }
+
+    h1{margin:0 0 12px;font-size:38px}
+    h2{margin-top:26px;font-size:22px}
+
+    p{color:var(--muted);font-weight:700}
+
+    .badge{
+      display:inline-block;
+      background:var(--pink);
+      color:#0b1220;
+      padding:6px 10px;
+      border-radius:999px;
+      font-weight:900;
+      font-size:12px;
+      margin-top:10px;
+    }
+
+    .actions{
+      margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;
+    }
+    .btn{
+      padding:12px 16px;border-radius:14px;
+      background:var(--pink);
+      color:#0b1220;
+      font-weight:900;
+    }
+
+    footer{
+      border-top:1px solid var(--line);
+      margin-top:40px;
+      padding:18px 0;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    @media(max-width:860px){
+      h1{font-size:30px}
+    }
+  </style>
 </head>
+
 <body>
 
-<nav>
-  <a href="index.html">Home</a> |
-  <a href="services.html">Services</a> |
-  <a href="about.html">About</a> |
-  <a href="contact.html">Contact</a> |
-  <a href="blog/index.html">Blog</a>
-</nav>
-<hr>
+<header>
+  <div class="container">
+    <div class="nav">
+      <div class="brand">
+        <img src="assets/logo.png" alt="Nidia’s Cleaning Service Logo">
+        <div>
+          Nidia’s House & Office Cleaning Service
+          <small>Mountainside, NJ</small>
+        </div>
+      </div>
 
-<h1>About Nidia’s House & Office Cleaning Service</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="blog/index.html">Blog</a></li>
+        </ul>
+      </nav>
 
-<p>
-Nidia’s House & Office Cleaning Service is a local, family-owned cleaning business
-serving Mountainside, NJ and surrounding areas.
-</p>
+      <a class="cta" href="tel:19083431845">Call Now: 908-343-1845</a>
+    </div>
+  </div>
+</header>
 
-<p>
-We are committed to providing reliable, detailed, and trustworthy cleaning services
-for homes and offices. Our goal is simple: help our clients enjoy clean, comfortable,
-and well-maintained spaces.
-</p>
+<main class="container">
+  <section class="hero">
+    <div class="card">
+      <h1>About Our Cleaning Service</h1>
 
-<h2>Our Approach</h2>
+      <p>
+        Nidia’s House & Office Cleaning Service is a family-owned cleaning business
+        proudly serving Mountainside, NJ and surrounding communities.
+      </p>
 
-<p>
-We believe that consistency and attention to detail make the difference.
-Every cleaning is done with care, respect for your space, and a strong work ethic.
-</p>
+      <p>
+        We focus on reliability, discretion, and exceptional attention to detail —
+        especially for larger homes, high-end residences, and professional office spaces.
+      </p>
 
-<p>
-Many of our clients choose to work with us on a regular schedule because they value
-dependability and quality service.
-</p>
+      <span class="badge">Experienced with Large Homes & Estates</span>
 
-<h2>Local & Reliable</h2>
+      <h2>Our Approach</h2>
+      <p>
+        Every home and office is treated with care and respect. We believe consistency,
+        trust, and quality work are what keep clients with us long-term.
+      </p>
 
-<p>
-As a local business based near Mountainside, NJ, we take pride in serving our community.
-We understand the importance of trust when allowing someone into your home or office,
-and we work hard to earn that trust every visit.
-</p>
+      <h2>Local & Trusted</h2>
+      <p>
+        As a local business, our reputation matters. Many of our clients work with us
+        on a recurring basis because they value professionalism and dependable service.
+      </p>
 
-<h2>Get in Touch</h2>
+      <div class="actions">
+        <a class="btn" href="tel:19083431845">Call Now</a>
+        <a class="btn" href="contact.html">Contact Us</a>
+      </div>
+    </div>
+  </section>
+</main>
 
-<p>
-If you are looking for a dependable cleaning service, we would be happy to help.
-</p>
+<footer>
+  <div class="container">
+    © <span id="year"></span> Nidia’s House & Office Cleaning Service • Mountainside, NJ • 908-343-1845
+  </div>
+</footer>
 
-<p>
-<strong>Call or text us at:</strong> <a href="tel:19083431845">908-343-1845</a>
-</p>
-
-<p>
-<a href="contact.html">Contact Us</a>
-</p>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
