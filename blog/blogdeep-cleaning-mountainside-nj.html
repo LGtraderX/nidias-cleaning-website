@@ -4,67 +4,320 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Deep Cleaning in Mountainside, NJ | What’s Included</title>
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --text:#eaf1ff;
+      --muted:#b7c4e2;
+      --line:rgba(255,255,255,.12);
+      --radius:18px;
+      --max:1100px;
+      --shadow:0 18px 55px rgba(0,0,0,.35);
+
+      /* Brand Pink (official) */
+      --accent:#f2a7b5;
+      --accentDark:#e58a9d;
+      --accentRgb:242,167,181;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color:var(--text);
+      background:
+        radial-gradient(900px 500px at 10% -10%, rgba(var(--accentRgb), .16), transparent 55%),
+        radial-gradient(900px 500px at 90% 0%, rgba(var(--accentRgb), .10), transparent 55%),
+        var(--bg);
+      line-height:1.6;
+    }
+
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto;padding:0 18px}
+
+    /* Header */
+    header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(11,18,32,.78);
+      backdrop-filter: blur(10px);
+      border-bottom:1px solid var(--line);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      padding:14px 0;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .brand img{
+      height:32px;
+      width:auto;
+      display:block;
+    }
+
+    .brand-text{
+      font-weight:900;
+      color:var(--accent);
+      line-height:1.1;
+      letter-spacing:.2px;
+    }
+
+    .brand-text small{
+      display:block;
+      font-size:12px;
+      color:var(--muted);
+      font-weight:700;
+      margin-top:2px;
+    }
+
+    nav ul{
+      list-style:none;
+      margin:0;
+      padding:0;
+      display:flex;
+      gap:8px;
+      flex-wrap:wrap;
+    }
+
+    nav a{
+      padding:9px 12px;
+      border-radius:12px;
+      color:var(--muted);
+      font-weight:800;
+    }
+
+    nav a:hover{
+      color:var(--text);
+      background:rgba(255,255,255,.06);
+    }
+
+    .cta{
+      padding:10px 16px;
+      border-radius:14px;
+      background:var(--accent);
+      color:var(--bg);
+      font-weight:900;
+      white-space:nowrap;
+      border:none;
+    }
+    .cta:hover{background:var(--accentDark)}
+
+    /* Page */
+    main{padding:44px 0 18px}
+
+    .card{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:26px;
+    }
+
+    .kicker{
+      color:var(--muted);
+      font-weight:800;
+      margin:0 0 10px;
+    }
+
+    h1{
+      margin:0 0 10px;
+      font-size:38px;
+      letter-spacing:-.6px;
+      line-height:1.15;
+    }
+
+    h2{
+      margin:22px 0 8px;
+      font-size:22px;
+    }
+
+    p, li{
+      color:var(--muted);
+      font-weight:700;
+    }
+
+    ul{
+      padding-left:18px;
+      margin:8px 0 10px;
+    }
+    li{margin:6px 0}
+
+    .section{
+      border-top:1px solid rgba(255,255,255,.08);
+      margin-top:18px;
+      padding-top:16px;
+    }
+
+    .actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:18px;
+    }
+
+    .btn{
+      padding:12px 16px;
+      border-radius:14px;
+      background:var(--accent);
+      color:var(--bg);
+      font-weight:900;
+      border:none;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      cursor:pointer;
+    }
+    .btn:hover{background:var(--accentDark)}
+
+    /* WhatsApp */
+    .whatsapp{
+      position:fixed;
+      right:18px;
+      bottom:18px;
+      background:#25D366;
+      color:#fff;
+      padding:14px 18px;
+      border-radius:999px;
+      font-weight:900;
+      box-shadow:0 12px 30px rgba(0,0,0,.35);
+      z-index:999;
+    }
+    .whatsapp:hover{background:#1ebe5d}
+
+    footer{
+      margin-top:26px;
+      border-top:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      padding:18px 0;
+      color:var(--muted);
+      font-weight:700;
+      font-size:14px;
+    }
+
+    @media (max-width:860px){
+      h1{font-size:32px}
+      .nav{align-items:flex-start}
+    }
+  </style>
 </head>
+
 <body>
 
-<nav>
-  <a href="../index.html">Home</a> |
-  <a href="../services.html">Services</a> |
-  <a href="../about.html">About</a> |
-  <a href="../contact.html">Contact</a> |
-  <a href="index.html">Blog</a>
-</nav>
-<hr>
+<header>
+  <div class="container">
+    <div class="nav">
+      <div class="brand">
+        <img src="../assets/logo.png" alt="Nidia’s House & Office Cleaning Service Logo">
+        <div class="brand-text">
+          Nidia’s House & Office Cleaning Service
+          <small>Mountainside, NJ</small>
+        </div>
+      </div>
 
-<h1>Deep Cleaning in Mountainside, NJ: What’s Included</h1>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../services.html">Services</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="index.html">Blog</a></li>
+        </ul>
+      </nav>
 
-<p>
-If you’re looking for deep cleaning in Mountainside, NJ, this guide explains what a deep clean includes
-and when it’s the best option. A deep cleaning is ideal for first-time service, seasonal refresh,
-or before starting a regular maintenance schedule.
-</p>
+      <a class="cta" href="tel:19083431845">Call Now: 908-343-1845</a>
+    </div>
+  </div>
+</header>
 
-<h2>What Is Deep Cleaning?</h2>
-<p>
-Deep cleaning is a more detailed cleaning focused on high-touch areas, buildup, and hard-to-reach spots.
-It goes beyond a regular cleaning to reset the home and create a clean baseline.
-</p>
+<main class="container">
+  <article class="card">
+    <p class="kicker">Cleaning Tips • Deep Cleaning</p>
 
-<h2>What’s Typically Included</h2>
-<ul>
-  <li>Bathrooms: detailed cleaning of sinks, tubs/showers, toilets, mirrors, and floors</li>
-  <li>Kitchen: counters, exterior of appliances, sink, floors, and general wipe-down of surfaces</li>
-  <li>Floors: vacuuming and mopping with extra attention to corners and edges</li>
-  <li>Dusting: baseboards, window sills, light dusting of reachable areas</li>
-  <li>High-touch areas: handles, switches, and commonly used surfaces</li>
-</ul>
+    <h1>Deep Cleaning in Mountainside, NJ: What’s Included</h1>
 
-<h2>When You Should Choose a Deep Clean</h2>
-<ul>
-  <li>First-time cleaning service</li>
-  <li>Before starting weekly, biweekly, or monthly maintenance</li>
-  <li>Move-in or move-out refresh</li>
-  <li>Seasonal reset (spring/fall cleaning)</li>
-</ul>
+    <p>
+      If you’re looking for deep cleaning in Mountainside, NJ, this guide explains what a deep clean includes
+      and when it’s the best option. A deep cleaning is ideal for first-time service, a seasonal refresh,
+      or before starting a regular maintenance schedule.
+    </p>
 
-<h2>Deep Cleaning + Maintenance</h2>
-<p>
-Many clients start with a deep clean and then continue with a regular schedule (weekly, biweekly, or monthly)
-to keep the home consistently clean.
-</p>
+    <div class="section">
+      <h2>What Is Deep Cleaning?</h2>
+      <p>
+        Deep cleaning is a more detailed cleaning focused on high-touch areas, buildup, and hard-to-reach spots.
+        It goes beyond a regular cleaning to reset the home and create a clean baseline.
+      </p>
+    </div>
 
-<h2>Get a Free Estimate</h2>
-<p>
-For deep cleaning in Mountainside, NJ and nearby areas, call or text us for a free estimate.
-</p>
+    <div class="section">
+      <h2>What’s Typically Included</h2>
+      <ul>
+        <li><strong>Bathrooms:</strong> sinks, tubs/showers, toilets, mirrors, and floors</li>
+        <li><strong>Kitchen:</strong> counters, exterior of appliances, sink, floors, and general surface wipe-down</li>
+        <li><strong>Floors:</strong> vacuuming and mopping with extra attention to corners and edges</li>
+        <li><strong>Dusting:</strong> baseboards, window sills, and reachable surfaces</li>
+        <li><strong>High-touch areas:</strong> handles, switches, and commonly used surfaces</li>
+      </ul>
+    </div>
 
-<p>
-<strong>Phone:</strong> <a href="tel:19083431845">908-343-1845</a>
-</p>
+    <div class="section">
+      <h2>When You Should Choose a Deep Clean</h2>
+      <ul>
+        <li>First-time cleaning service</li>
+        <li>Before starting weekly, biweekly, or monthly maintenance</li>
+        <li>Move-in or move-out refresh</li>
+        <li>Seasonal reset (spring/fall cleaning)</li>
+      </ul>
+    </div>
 
-<p>
-<a href="../services.html">View Services</a> | <a href="../contact.html">Contact Us</a>
-</p>
+    <div class="section">
+      <h2>Deep Cleaning + Maintenance</h2>
+      <p>
+        Many clients start with a deep clean and then continue with a regular schedule (weekly, biweekly, or monthly)
+        to keep the home consistently clean.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Get a Free Estimate</h2>
+      <p>
+        For deep cleaning in Mountainside, NJ and nearby areas, call or text us for a free estimate —
+        or email us if you’re in the office and can’t talk.
+      </p>
+
+      <div class="actions">
+        <a class="btn" href="tel:19083431845">Call Now</a>
+        <a class="btn" href="https://wa.me/19083431845" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn" href="mailto:nidiacleaningservices@gmail.com?subject=Cleaning%20Quote%20Request">Email for a Quote</a>
+        <a class="btn" href="../services.html">View Services</a>
+        <a class="btn" href="index.html">Back to Blog</a>
+      </div>
+    </div>
+  </article>
+</main>
+
+<footer>
+  <div class="container">
+    © <span id="year"></span> Nidia’s House & Office Cleaning Service • Mountainside, NJ • 908-343-1845
+  </div>
+</footer>
+
+<a class="whatsapp" href="https://wa.me/19083431845" target="_blank" rel="noopener">WhatsApp</a>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 </body>
 </html>
