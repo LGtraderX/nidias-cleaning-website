@@ -69,7 +69,7 @@
       display:flex;
       align-items:center;
       gap:12px;
-      min-width: 240px;
+      min-width:240px;
     }
 
     .brand img{
@@ -223,7 +223,7 @@
 
     @media (max-width:860px){
       h1{font-size:32px}
-      .nav{align-items:flex-start; flex-direction:column}
+      .nav{align-items:flex-start;flex-direction:column}
       .cta{width:100%}
     }
   </style>
@@ -235,7 +235,8 @@
   <div class="container">
     <div class="nav">
       <div class="brand">
-        <img src="assets/logo.png" alt="Nidia’s House & Office Cleaning Service Logo">
+        <!-- IMPORTANT: this page is inside /blog/, so logo needs ../ -->
+        <img src="../assets/logo.png" alt="Nidia’s House & Office Cleaning Service Logo">
         <div class="brand-text">
           Nidia’s House & Office Cleaning Service
           <small>Summit, NJ</small>
@@ -244,11 +245,12 @@
 
       <nav aria-label="Main navigation">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="blog/index.html">Blog</a></li>
+          <!-- IMPORTANT: inside /blog/ so all main pages need ../ -->
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../services.html">Services</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+          <li><a href="index.html">Blog</a></li>
         </ul>
       </nav>
 
@@ -324,12 +326,18 @@
       </p>
       <p><strong>Call or text today to schedule your cleaning service.</strong></p>
 
+      <!-- FIXED BUTTONS: correct paths from /blog/ -->
       <div class="actions">
         <a class="btn" href="tel:19083431845">Call Now</a>
         <a class="btn" href="https://wa.me/19083431845" target="_blank" rel="noopener">WhatsApp</a>
         <a class="btn" href="mailto:nidiacleaningservices@gmail.com?subject=Cleaning%20Quote%20Request">Email for a Quote</a>
-        <a class="btn" href="services.html">View Services</a>
-        <a class="btn" href="contact.html">Contact Page</a>
+
+        <!-- THESE ARE THE COMMON BROKEN ONES (now fixed) -->
+        <a class="btn" href="../services.html">View Services</a>
+        <a class="btn" href="../contact.html">Contact Page</a>
+
+        <!-- Back to blog index (same folder) -->
+        <a class="btn" href="index.html">Back to Blog</a>
       </div>
     </div>
   </article>
