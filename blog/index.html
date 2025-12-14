@@ -8,7 +8,6 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-BBCGLGN5DC');
 </script>
 
@@ -25,8 +24,6 @@
       --radius:18px;
       --max:1100px;
       --shadow:0 18px 55px rgba(0,0,0,.35);
-
-      /* Brand Pink (official) */
       --accent:#f2a7b5;
       --accentDark:#e58a9d;
       --accentRgb:242,167,181;
@@ -47,7 +44,6 @@
     a{color:inherit;text-decoration:none}
     .container{max-width:var(--max);margin:0 auto;padding:0 18px}
 
-    /* Header */
     header{
       position:sticky;
       top:0;
@@ -71,17 +67,12 @@
       gap:12px;
     }
 
-    .brand img{
-      height:32px;
-      width:auto;
-      display:block;
-    }
+    .brand img{height:32px}
 
     .brand-text{
       font-weight:900;
       color:var(--accent);
       line-height:1.1;
-      letter-spacing:.2px;
     }
 
     .brand-text small{
@@ -119,12 +110,10 @@
       background:var(--accent);
       color:var(--bg);
       font-weight:900;
-      white-space:nowrap;
       border:none;
     }
     .cta:hover{background:var(--accentDark)}
 
-    /* Page */
     main{padding:44px 0 18px}
 
     .card{
@@ -181,7 +170,6 @@
     }
     .post a.read:hover{background:var(--accentDark)}
 
-    /* WhatsApp */
     .whatsapp{
       position:fixed;
       right:18px;
@@ -194,7 +182,6 @@
       box-shadow:0 12px 30px rgba(0,0,0,.35);
       z-index:999;
     }
-    .whatsapp:hover{background:#1ebe5d}
 
     footer{
       margin-top:26px;
@@ -208,7 +195,6 @@
 
     @media (max-width:860px){
       h1{font-size:32px}
-      .nav{align-items:flex-start}
     }
   </style>
 </head>
@@ -222,11 +208,11 @@
         <img src="../assets/logo.png" alt="Nidia’s House & Office Cleaning Service Logo">
         <div class="brand-text">
           Nidia’s House & Office Cleaning Service
-          <small>Mountainside, NJ</small>
+          <small>Serving Summit, NJ & Nearby Areas</small>
         </div>
       </div>
 
-      <nav aria-label="Main navigation">
+      <nav>
         <ul>
           <li><a href="../index.html">Home</a></li>
           <li><a href="../services.html">Services</a></li>
@@ -245,23 +231,31 @@
   <section class="card">
     <h1>Cleaning Tips & Local Cleaning Services</h1>
     <p class="sub">
-      Helpful information about house and office cleaning, deep cleaning,
-      and move-in / move-out services in Mountainside, NJ and nearby areas.
+      Helpful articles about professional house and office cleaning services
+      across Summit, NJ and nearby high-income communities.
     </p>
 
     <div class="post-list">
+
+      <article class="post">
+        <h2>House Cleaning Services in Summit, NJ</h2>
+        <p>Professional cleaning services for homes and offices in Summit.</p>
+        <a class="read" href="house-cleaning-summit-nj.html">Read Article</a>
+      </article>
+
       <article class="post">
         <h2>Deep Cleaning in Mountainside, NJ</h2>
         <p>What’s included and when you need it.</p>
         <a class="read" href="deep-cleaning-mountainside-nj.html">Read Article</a>
       </article>
+
     </div>
   </section>
 </main>
 
 <footer>
   <div class="container">
-    © <span id="year"></span> Nidia’s House & Office Cleaning Service • Mountainside, NJ • 908-343-1845
+    © <span id="year"></span> Nidia’s House & Office Cleaning Service • New Jersey
   </div>
 </footer>
 
