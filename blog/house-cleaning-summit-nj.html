@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-BBCGLGN5DC"></script>
   <script>
@@ -25,8 +26,6 @@
       --radius:18px;
       --max:1100px;
       --shadow:0 18px 55px rgba(0,0,0,.35);
-
-      /* Brand Pink (official) */
       --accent:#f2a7b5;
       --accentDark:#e58a9d;
       --accentRgb:242,167,181;
@@ -47,7 +46,6 @@
     a{color:inherit;text-decoration:none}
     .container{max-width:var(--max);margin:0 auto;padding:0 18px}
 
-    /* Header */
     header{
       position:sticky;
       top:0;
@@ -69,20 +67,14 @@
       display:flex;
       align-items:center;
       gap:12px;
-      min-width:240px;
     }
 
-    .brand img{
-      height:32px;
-      width:auto;
-      display:block;
-    }
+    .brand img{height:32px}
 
     .brand-text{
       font-weight:900;
       color:var(--accent);
       line-height:1.1;
-      letter-spacing:.2px;
     }
 
     .brand-text small{
@@ -100,7 +92,6 @@
       display:flex;
       gap:8px;
       flex-wrap:wrap;
-      justify-content:center;
     }
 
     nav a{
@@ -121,15 +112,10 @@
       background:var(--accent);
       color:var(--bg);
       font-weight:900;
-      white-space:nowrap;
       border:none;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
     }
     .cta:hover{background:var(--accentDark)}
 
-    /* Page */
     main{padding:44px 0 18px}
 
     .card{
@@ -150,7 +136,6 @@
       margin:0 0 10px;
       font-size:38px;
       letter-spacing:-.6px;
-      line-height:1.15;
     }
 
     h2{
@@ -189,14 +174,9 @@
       color:var(--bg);
       font-weight:900;
       border:none;
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      cursor:pointer;
     }
     .btn:hover{background:var(--accentDark)}
 
-    /* WhatsApp */
     .whatsapp{
       position:fixed;
       right:18px;
@@ -209,7 +189,6 @@
       box-shadow:0 12px 30px rgba(0,0,0,.35);
       z-index:999;
     }
-    .whatsapp:hover{background:#1ebe5d}
 
     footer{
       margin-top:26px;
@@ -220,12 +199,6 @@
       font-weight:700;
       font-size:14px;
     }
-
-    @media (max-width:860px){
-      h1{font-size:32px}
-      .nav{align-items:flex-start;flex-direction:column}
-      .cta{width:100%}
-    }
   </style>
 </head>
 
@@ -235,7 +208,6 @@
   <div class="container">
     <div class="nav">
       <div class="brand">
-        <!-- IMPORTANT: this page is inside /blog/, so logo needs ../ -->
         <img src="../assets/logo.png" alt="Nidia’s House & Office Cleaning Service Logo">
         <div class="brand-text">
           Nidia’s House & Office Cleaning Service
@@ -243,9 +215,9 @@
         </div>
       </div>
 
-      <nav aria-label="Main navigation">
+      <!-- 🔴 MENÚ IDÉNTICO AL DE MOUNTAINSIDE -->
+      <nav>
         <ul>
-          <!-- IMPORTANT: inside /blog/ so all main pages need ../ -->
           <li><a href="../index.html">Home</a></li>
           <li><a href="../services.html">Services</a></li>
           <li><a href="../about.html">About</a></li>
@@ -268,88 +240,51 @@
     <p>
       If you are looking for <strong>professional house cleaning services in Summit, NJ</strong>,
       our team provides reliable, detail-focused cleaning for residential homes and offices.
-      We serve homeowners and professionals who value consistency, discretion, and quality.
     </p>
 
     <div class="section">
       <h2>Professional Cleaning for Homes and Offices in Summit</h2>
       <p>
-        Summit, NJ is known for its beautiful homes, quiet neighborhoods, and busy professionals.
-        Our cleaning services are designed to meet the needs of family residences and professional
-        office spaces throughout Summit and surrounding areas.
-      </p>
-      <p>
-        We focus on maintaining clean, organized, and healthy environments through consistent
-        routines and attention to detail.
+        Summit is known for its beautiful homes and busy professionals.
+        Our cleaning services are designed to maintain clean, organized,
+        and healthy environments with consistent attention to detail.
       </p>
     </div>
 
     <div class="section">
       <h2>What Our House Cleaning Services Include</h2>
       <ul>
-        <li>Regular house cleaning (weekly, bi-weekly, monthly)</li>
-        <li>Deep cleaning for homes and offices</li>
+        <li>Regular house cleaning</li>
+        <li>Deep cleaning</li>
         <li>Move-in and move-out cleaning</li>
-        <li>Kitchen, bathroom, and common area cleaning</li>
+        <li>Kitchen, bathroom, and common areas</li>
         <li>Professional office cleaning</li>
       </ul>
     </div>
 
     <div class="section">
-      <h2>Why Choose Our Cleaning Service in Summit, NJ</h2>
-      <p>
-        Our clients in Summit choose us because we provide dependable service and consistent results.
-        We work with respect for your home, your schedule, and your privacy.
-      </p>
-      <ul>
-        <li>Local and professional cleaning team</li>
-        <li>Detail-oriented and reliable service</li>
-        <li>Flexible scheduling</li>
-        <li>Trusted by homeowners and professionals</li>
-      </ul>
-    </div>
-
-    <div class="section">
-      <h2>Serving Summit and Nearby Areas</h2>
-      <p>
-        In addition to Summit, NJ, we proudly serve nearby communities including
-        Short Hills, New Providence, Chatham, Madison, and Mendham.
-        Our goal is to provide high-quality house cleaning services across the region.
-      </p>
-    </div>
-
-    <div class="section">
       <h2>Schedule House Cleaning Services in Summit, NJ</h2>
-      <p>
-        If you are interested in professional house cleaning services in Summit, NJ,
-        contact us today to check availability and discuss your cleaning needs.
-      </p>
-      <p><strong>Call or text today to schedule your cleaning service.</strong></p>
 
-      <!-- FIXED BUTTONS: correct paths from /blog/ -->
+      <!-- 🔴 BOTONES IDÉNTICOS A MOUNTAINSIDE -->
       <div class="actions">
         <a class="btn" href="tel:19083431845">Call Now</a>
-        <a class="btn" href="https://wa.me/19083431845" target="_blank" rel="noopener">WhatsApp</a>
-        <a class="btn" href="mailto:nidiacleaningservices@gmail.com?subject=Cleaning%20Quote%20Request">Email for a Quote</a>
-
-        <!-- THESE ARE THE COMMON BROKEN ONES (now fixed) -->
+        <a class="btn" href="https://wa.me/19083431845" target="_blank">WhatsApp</a>
+        <a class="btn" href="mailto:nidiacleaningservices@gmail.com">Email</a>
         <a class="btn" href="../services.html">View Services</a>
-        <a class="btn" href="../contact.html">Contact Page</a>
-
-        <!-- Back to blog index (same folder) -->
         <a class="btn" href="index.html">Back to Blog</a>
       </div>
     </div>
+
   </article>
 </main>
 
 <footer>
   <div class="container">
-    © <span id="year"></span> Nidia’s House & Office Cleaning Service • Summit, NJ • 908-343-1845
+    © <span id="year"></span> Nidia’s House & Office Cleaning Service • Summit, NJ
   </div>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/19083431845" target="_blank" rel="noopener">WhatsApp</a>
+<a class="whatsapp" href="https://wa.me/19083431845" target="_blank">WhatsApp</a>
 
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
